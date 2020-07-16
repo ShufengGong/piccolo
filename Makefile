@@ -6,7 +6,7 @@ VPATH=${SRCDIR}:${OUTDIR}
 CFLAGS:=${CFLAGS} -fPIC -O0 -ggdb2
 CPPFLAGS:=${CPPFLAGS} -I${OUTDIR} -I${SRCDIR} -I${INCDIR} -I${SRCDIR}/external/google-logging -I${SRCDIR}/external/google-flags
 CXXFLAGS:=${CXXFLAGS} -std=c++0x ${CFLAGS}
-LDFLAGS=-L. -lprotobuf -lboost_thread
+LDFLAGS=-L. -lprotobuf -lboost_thread -lz -lboost_system
 
 CXX=mpic++
 PROTO=$(shell find ${SRCDIR}/ -name '*.proto')
